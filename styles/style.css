@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.progress__bar{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__bar{
+  width: 600px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills__bar .bar{
+  margin: 20px 0;
+}
+
+.skills__bar .bar:first-child{
+  margin-top: 0;
+}
+
+.skills__bar .bar .info{
+  margin-bottom: 5px;
+}
+
+.skills__bar .bar .info span{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skills__bar .bar .progress__line{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.bar .progress__line span{
+  width: 0%;
+  height: 100%;
+  background-color: #57FFDC;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.bar .progress__line span::before{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+}
+
+.bar .progress__line span::after{
+  content: '80%';
+  position: absolute;
+  top: -23px;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+
+/* SKILLS */
+
+.bar .progress__line.skill1 span::after{
+  content: '90%';
+}
+
+.bar .progress__line.skill2 span::after{
+  content: '40%';
+}
+
+.bar .progress__line.skill3 span::after{
+  content: '70%';
+}
+
+.bar .progress__line.skill1 span{
+  /* width: 90%; */
+  animation: skill1 1 1s ease-in-out forwards;
+}
+
+@keyframes skill1 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+
+.bar .progress__line.skill2 span{
+  /* width: 40%; */
+  animation: skill2 1 1s ease-in-out forwards;
+}
+
+@keyframes skill2 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 40%;
+  }
+}
+
+.bar .progress__line.skill3 span{
+  /* width: 70%; */
+  animation: skill3 1 1s ease-in-out forwards;
+}
+
+@keyframes skill3 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 70%;
+  }
+}
